@@ -70,7 +70,7 @@ require_once (PATH_t3lib.'class.t3lib_basicfilefunc.php');
 
 
 require_once(t3lib_extMgm::extPath('kb_packman').'class.tx_kbpackman.php');
-if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['DAMsupport']) {
+if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['DAMsupport'] && t3lib_extMgm::isLoaded('dam')) {
 	require_once(t3lib_extMgm::extPath('dam').'lib/class.tx_dam_guirenderlist.php');
 	require_once(t3lib_extMgm::extPath('dam').'lib/class.tx_dam_scbase.php');
 	require_once(t3lib_extMgm::extPath('kb_packman').'class.tx_kbpackman_dam.php');
@@ -142,7 +142,7 @@ class tx_kbpackman_module extends tx_dam_SCbase	{
 
 		$this->pageinfo=array('title' => 'File-List','uid'=>0,'pid'=>0);
 
-		$headerSection = $this->doc->getHeader('pages',$this->pageinfo,$this->pageinfo['_thePath']).'<br />'.$LANG->sL('LLL:EXT:lang/locallang_core.php:labels.path').': '.t3lib_div::fixed_lgd_pre($this->pageinfo['_thePath'],50);
+		$headerSection = $this->doc->getHeader('pages',$this->pageinfo,$this->pageinfo['_thePath']).'<br />'.$LANG->sL('LLL:EXT:lang/locallang_core.php:labels.path').': '.t3lib_div::fixed_lgd_cs($this->pageinfo['_thePath'],50);
 
 		$this->content.=$this->doc->startPage($LANG->getLL('title'));
 		$this->content.=$this->doc->header($LANG->getLL('title'));

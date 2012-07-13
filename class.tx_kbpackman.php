@@ -85,19 +85,19 @@ class tx_kbpackman	{
 	 */
 	function isCompressed($file)	{
 		// Handle ZIP Extensions
-		if (eregi('\.zip$', $file)) {
+		if (preg_match('/\.zip$/', $file)) {
 			return true;
 		}
 		// Handle RAR Extensions
-		if (eregi('\.rar$', $file)) {
+		if (preg_match('/\.rar$/', $file)) {
 			return true;
 		}
 		// Handle TAR.GZ Extensions
-		if (eregi('\.tar\.gz$', $file) || eregi('\.tgz$', $file)) {
+		if (preg_match('/\.tar.gz$/', $file) || preg_match('/\.tgz$/', $file)) {
 			return true;
 		}
 		// Handle TAR.BZ2 Extensions
-		if (eregi('\.tar\.bz2$', $file) || eregi('\.tbz2$', $file)) {
+		if (preg_match('/\.tar.bz2/', $file) || preg_match('/\.tbz2/', $file)) {
 			return true;
 		}
 		return false;

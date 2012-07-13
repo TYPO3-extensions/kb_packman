@@ -11,3 +11,9 @@ targetExt = zip
 # cat=basic; type=boolean; label=DAM support: When set and DAM (+dam_index) is installed newly extracted files get indexed automatically
 DAMsupport = 1
 
+# cat=basic; type=string; label=RAR path: Path to the "rar" binary for handling rar archives. When not set default locations get searched for the binary.
+rarPath =
+
+# cat=basic; type=string; label=unRAR path: Path to the "unrar" binary for handling rar archives. When not set default locations get searched for the binary.
+unrarPath =
+

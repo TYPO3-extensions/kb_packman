@@ -1,3 +1,9 @@
+2012-07-13  Bernhard Kraft  <kraftb@seicht.co.at>
+
+	* Fixed rar support
+	* Updated documentation
+	* Uploaded to TER as version 0.3.2
+
 2010-03-11  Bernhard Kraft  <kraftb@think-open.at>
 
 	* Added support for RAR files

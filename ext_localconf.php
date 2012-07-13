@@ -31,5 +31,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['fileTarget'] = trim($_EXTCONF[
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['targetExt'] = trim($_EXTCONF['targetExt']);
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['DAMsupport'] = trim($_EXTCONF['DAMsupport']);
 
+$GLOBALS['TYPO3_CONF_VARS']['BE']['rar_path'] = $GLOBALS['TYPO3_CONF_VARS']['BE']['rar_path']?$GLOBALS['TYPO3_CONF_VARS']['BE']['rar_path']:trim($_EXTCONF['rarPath']);
+$GLOBALS['TYPO3_CONF_VARS']['BE']['unrar_path'] = $GLOBALS['TYPO3_CONF_VARS']['BE']['unrar_path']?$GLOBALS['TYPO3_CONF_VARS']['BE']['unrar_path']:trim($_EXTCONF['unrarPath']);
 
 ?>
